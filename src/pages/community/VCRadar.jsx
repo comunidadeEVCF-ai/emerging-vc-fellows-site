@@ -207,10 +207,7 @@ export default function VCRadar() {
                 background: "#e8e8e3", margin: "0 auto 0.75rem",
                 overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center",
               }}>
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#888" strokeWidth="1.5" aria-hidden="true">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                  <circle cx="12" cy="7" r="4"/>
-                </svg>
+                <img src="/assets/1761139293570.jpeg" alt="Anderson Thees" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </div>
               <div style={{ fontSize: "1rem", fontWeight: 700, color: "#0d0d1a" }}>Anderson Thees</div>
               <div style={{ fontSize: "0.85rem", color: "#777", marginTop: 4 }}>Venture Capitalist @ Itaú</div>
