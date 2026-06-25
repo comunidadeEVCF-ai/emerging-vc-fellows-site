@@ -24,7 +24,7 @@ export default function VCRadar() {
           </span>
         </a>
         <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-          {[["Home", "/"], ["Community", "/community"]].map(([label, href]) => (
+          {[["Home", "/"]].map(([label, href]) => (
             <a key={label} href={href} style={{
               fontSize: 13, fontWeight: 500, letterSpacing: "0.06em",
               textDecoration: "none", color: "#0d0d1a", textTransform: "uppercase",

@@ -112,7 +112,7 @@ export default function Index() {
           </span>
         </a>
         <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-          {[["Home", "/"], ["Community", "/community"]].map(([label, href]) => (
+          {[["Home", "/"]].map(([label, href]) => (
             <a key={label} href={href} style={{
               fontSize: 13, fontWeight: 500, letterSpacing: "0.06em",
               textDecoration: "none", color: "rgba(255,255,255,0.6)", textTransform: "uppercase",

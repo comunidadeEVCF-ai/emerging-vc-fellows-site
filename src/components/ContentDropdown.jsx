@@ -29,24 +29,27 @@ export default function ContentDropdown({ dark = true }) {
 
       {open && (
         <div style={{
-          position: "absolute", top: "calc(100% + 14px)", left: "50%", transform: "translateX(-50%)",
-          background: "#eceae5", borderRadius: 6, padding: "0.4rem 0",
-          minWidth: 190, boxShadow: "0 12px 30px rgba(0,0,0,0.18)",
-          zIndex: 200,
+          position: "absolute", top: "100%", left: "50%", transform: "translateX(-50%)",
+          paddingTop: 14, zIndex: 200,
         }}>
-          {ITEMS.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              style={{
-                display: "block", padding: "0.7rem 1.25rem",
-                fontSize: 14, fontWeight: 500, color: "#0d0d1a",
-                textDecoration: "none", textTransform: "none", letterSpacing: 0,
-              }}
-            >
-              {item.label}
-            </Link>
-          ))}
+          <div style={{
+            background: "#eceae5", borderRadius: 6, padding: "0.4rem 0",
+            minWidth: 190, boxShadow: "0 12px 30px rgba(0,0,0,0.18)",
+          }}>
+            {ITEMS.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                style={{
+                  display: "block", padding: "0.7rem 1.25rem",
+                  fontSize: 14, fontWeight: 500, color: "#0d0d1a",
+                  textDecoration: "none", textTransform: "none", letterSpacing: 0,
+                }}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
         </div>
       )}
     </div>

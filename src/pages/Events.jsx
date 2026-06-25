@@ -1,6 +1,6 @@
 import ContentDropdown from "../components/ContentDropdown";
 
-const NAV_LINKS_LEFT = [["Home", "/"], ["Community", "/community"]];
+const NAV_LINKS_LEFT = [["Home", "/"]];
 const NAV_LINKS_RIGHT = [["Events", "/events"], ["Membership", "https://criteriosevcf.carrd.co/"]];
 
 const Logo = () => (
