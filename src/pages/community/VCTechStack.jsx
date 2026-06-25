@@ -1,4 +1,7 @@
-const NAV_LINKS = [["Home", "/"], ["Community", "/community"], ["Events", "/events"], ["Membership", "https://criteriosevcf.carrd.co/"]];
+import ContentDropdown from "../../components/ContentDropdown";
+
+const NAV_LINKS_LEFT = [["Home", "/"], ["Community", "/community"]];
+const NAV_LINKS_RIGHT = [["Events", "/events"], ["Membership", "https://criteriosevcf.carrd.co/"]];
 
 const Logo = () => (
   <svg viewBox="0 0 816.954 567.512" width="32" height="22" aria-hidden="true">
@@ -45,7 +48,14 @@ export default function VCTechStack() {
           </span>
         </a>
         <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-          {NAV_LINKS.map(([label, href]) => (
+          {NAV_LINKS_LEFT.map(([label, href]) => (
+            <a key={label} href={href} style={{
+              fontSize: 13, fontWeight: 500, letterSpacing: "0.06em",
+              textDecoration: "none", color: "#0d0d1a", textTransform: "uppercase",
+            }}>{label}</a>
+          ))}
+          <ContentDropdown dark={false} />
+          {NAV_LINKS_RIGHT.map(([label, href]) => (
             <a key={label} href={href} style={{
               fontSize: 13, fontWeight: 500, letterSpacing: "0.06em",
               textDecoration: "none", color: "#0d0d1a", textTransform: "uppercase",

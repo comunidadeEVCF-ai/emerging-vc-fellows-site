@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import ContentDropdown from "../../components/ContentDropdown";
 
 // ── EVCF Real Logo Icon (extracted from ICON-COLOR.pdf) ──────────────────────
 const EVCFIcon = ({ size = 48, opacity = 1, className = "" }) => (
@@ -79,58 +79,6 @@ const DMDeraikLogo = ({ height = 36 }) => (
   </div>
 );
 
-// ── Resource card with hover reveal ────────────────────────────────────────────
-const ResourceCard = ({ to, eyebrow, title, body, img }) => {
-  const [hovered, setHovered] = useState(false);
-  return (
-    <Link
-      to={to}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{
-        position: "relative", display: "block", textDecoration: "none",
-        borderRadius: 4, overflow: "hidden", aspectRatio: "16/10",
-        border: "1px solid #e8e8e3",
-      }}
-    >
-      <img
-        src={img}
-        alt={title}
-        style={{
-          width: "100%", height: "100%", objectFit: "cover", display: "block",
-          transform: hovered ? "scale(1.04)" : "scale(1)",
-          transition: "transform 0.4s ease",
-        }}
-      />
-      <div style={{
-        position: "absolute", inset: 0,
-        background: "linear-gradient(to top, rgba(10,15,46,0.9) 0%, rgba(10,15,46,0.55) 45%, rgba(10,15,46,0.15) 100%)",
-      }} />
-      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "1.5rem" }}>
-        <div style={{ fontSize: 10, fontWeight: 600, letterSpacing: "0.12em", color: "rgba(255,255,255,0.55)", textTransform: "uppercase", marginBottom: 6 }}>
-          {eyebrow}
-        </div>
-        <div style={{ fontSize: "1.3rem", fontWeight: 800, color: "#fff", marginBottom: 6, letterSpacing: "-0.01em" }}>
-          {title}
-        </div>
-        <p style={{
-          fontSize: "0.9rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.5, margin: "0 0 0.75rem",
-          maxWidth: 420,
-        }}>
-          {body}
-        </p>
-        <span style={{
-          fontSize: 12, fontWeight: 700, color: "#fff", letterSpacing: "0.08em", textTransform: "uppercase",
-          opacity: hovered ? 1 : 0, transform: hovered ? "translateX(0)" : "translateX(-6px)",
-          transition: "opacity 0.25s ease, transform 0.25s ease",
-        }}>
-          View {title} →
-        </span>
-      </div>
-    </Link>
-  );
-};
-
 // ── Main page ─────────────────────────────────────────────────────────────────
 export default function Index() {
   const heroRef = useRef(null);
@@ -164,7 +112,14 @@ export default function Index() {
           </span>
         </a>
         <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-          {[["Home", "/"], ["Community", "/community"], ["Events", "/events"], ["Membership", "https://criteriosevcf.carrd.co/"]].map(([label, href]) => (
+          {[["Home", "/"], ["Community", "/community"]].map(([label, href]) => (
+            <a key={label} href={href} style={{
+              fontSize: 13, fontWeight: 500, letterSpacing: "0.06em",
+              textDecoration: "none", color: "rgba(255,255,255,0.6)", textTransform: "uppercase",
+            }}>{label}</a>
+          ))}
+          <ContentDropdown dark />
+          {[["Events", "/events"], ["Membership", "https://criteriosevcf.carrd.co/"]].map(([label, href]) => (
             <a key={label} href={href} style={{
               fontSize: 13, fontWeight: 500, letterSpacing: "0.06em",
               textDecoration: "none", color: "rgba(255,255,255,0.6)", textTransform: "uppercase",
@@ -302,38 +257,6 @@ export default function Index() {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 02 COMMUNITY TOOLS ── */}
-      <section style={{ padding: "0 2.5rem 7rem", background: "#fafaf8" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{ fontSize: 11, letterSpacing: "0.14em", color: "#888", textTransform: "uppercase", fontWeight: 600, marginBottom: "1rem" }}>
-            02 — Community Tools
-          </div>
-          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.02em", marginBottom: "1rem", lineHeight: 1.1 }}>
-            Resources built for the community.
-          </h2>
-          <p style={{ fontSize: "1.1rem", color: "#555", maxWidth: 600, lineHeight: 1.7, marginBottom: "3rem" }}>
-            Two living resources curated by Emerging members — explore the tools VCs actually use and who's investing in what.
-          </p>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
-            <ResourceCard
-              to="/community/vc-tech-stack"
-              eyebrow="Resource"
-              title="VC Tech Stack"
-              body="A curated map of the tools and platforms VC teams in Brazil rely on day to day."
-              img="/assets/capa_mockup (1).png"
-            />
-            <ResourceCard
-              to="/community/vc-radar"
-              eyebrow="Resource"
-              title="VC Radar"
-              body="A live radar of who's investing in what across the Brazilian and Latam ecosystem."
-              img="/assets/capa-radarvc (1).png"
-            />
           </div>
         </div>
       </section>

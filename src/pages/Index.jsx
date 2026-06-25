@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import ContentDropdown from "../components/ContentDropdown";
 
 const EVCFIcon = ({ size = 48, opacity = 1, className = "" }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 816.954 567.512"
@@ -29,7 +30,11 @@ export default function Index() {
           <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.08em", color: "#fff", textTransform: "uppercase" }}>Emerging</span>
         </a>
         <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-          {[["Home", "/"], ["Community", "/community"], ["Events", "/events"], ["Membership", "https://criteriosevcf.carrd.co/"]].map(([label, href]) => (
+          {[["Home", "/"], ["Community", "/community"]].map(([label, href]) => (
+            <a key={label} href={href} style={{ fontSize: 13, fontWeight: 500, letterSpacing: "0.06em", textDecoration: "none", color: "rgba(255,255,255,0.6)", textTransform: "uppercase" }}>{label}</a>
+          ))}
+          <ContentDropdown dark />
+          {[["Events", "/events"], ["Membership", "https://criteriosevcf.carrd.co/"]].map(([label, href]) => (
             <a key={label} href={href} style={{ fontSize: 13, fontWeight: 500, letterSpacing: "0.06em", textDecoration: "none", color: "rgba(255,255,255,0.6)", textTransform: "uppercase", ...(label === "Membership" ? { border: "1px solid rgba(255,255,255,0.3)", color: "#fff", padding: "7px 18px", borderRadius: 20 } : {}) }}>{label}{label === "Membership" ? " →" : ""}</a>
           ))}
         </div>

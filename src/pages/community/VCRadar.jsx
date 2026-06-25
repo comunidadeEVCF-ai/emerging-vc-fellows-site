@@ -1,3 +1,5 @@
+import ContentDropdown from "../../components/ContentDropdown";
+
 export default function VCRadar() {
   return (
     <div style={{ fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", background: "#fafaf8", color: "#0d0d1a" }}>
@@ -22,7 +24,14 @@ export default function VCRadar() {
           </span>
         </a>
         <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-          {[["Home", "/"], ["Community", "/community"], ["Events", "/events"], ["Membership", "https://criteriosevcf.carrd.co/"]].map(([label, href]) => (
+          {[["Home", "/"], ["Community", "/community"]].map(([label, href]) => (
+            <a key={label} href={href} style={{
+              fontSize: 13, fontWeight: 500, letterSpacing: "0.06em",
+              textDecoration: "none", color: "#0d0d1a", textTransform: "uppercase",
+            }}>{label}</a>
+          ))}
+          <ContentDropdown dark={false} />
+          {[["Events", "/events"], ["Membership", "https://criteriosevcf.carrd.co/"]].map(([label, href]) => (
             <a key={label} href={href} style={{
               fontSize: 13, fontWeight: 500, letterSpacing: "0.06em",
               textDecoration: "none", color: "#0d0d1a", textTransform: "uppercase",
