@@ -252,7 +252,7 @@ export default function Index() {
               A selective fit.
             </h2>
             <p style={{ fontSize: "1.05rem", color: "#555", lineHeight: 1.7 }}>
-              Applications open for professionals who are already doing the work — not aspiring to it.
+              Built for professionals already working in VC, looking to go further.
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>

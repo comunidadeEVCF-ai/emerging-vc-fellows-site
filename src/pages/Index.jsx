@@ -89,7 +89,7 @@ export default function Index() {
           <div>
             <div style={{ fontSize: 11, letterSpacing: "0.14em", color: "#888", textTransform: "uppercase", marginBottom: "1.5rem", fontWeight: 600 }}>Who can join</div>
             <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.02em", lineHeight: 1.1, marginBottom: "1.5rem" }}>A selective fit.</h2>
-            <p style={{ fontSize: "1.05rem", color: "#555", lineHeight: 1.7 }}>Applications open for professionals who are already doing the work — not aspiring to it.</p>
+            <p style={{ fontSize: "1.05rem", color: "#555", lineHeight: 1.7 }}>Built for professionals already working in VC, looking to go further.</p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
             {["Works full time at a VC or CVC firm", "Analyst, Associate, or Principal — 3 to 10 years in the ecosystem", "Selected by profile — quality over volume"].map((item) => (
