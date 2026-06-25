@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import ContentDropdown from "../components/ContentDropdown";
+import AWSLogo from "../components/AWSLogo";
 
 const EVCFIcon = ({ size = 48, opacity = 1, className = "" }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 816.954 567.512"
@@ -136,13 +137,14 @@ export default function Index() {
           <p style={{ fontSize: "1rem", color: "#666", maxWidth: 480, lineHeight: 1.7, marginBottom: "3rem" }}>Organizations that believe in the value of a curated VC community.</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1px", background: "#efefea", border: "1px solid #efefea", borderRadius: 4, overflow: "hidden", marginBottom: "3rem" }}>
             {[
-              { label: "FM/Derraik", src: "/assets/FM_Derraik (1).png" },
-              { label: "ABVCAP", src: "/assets/images.jpg" },
-              { label: "AWS", src: "/assets/Descubre-el-Cloud-de-AWS.png" },
-              { label: "Marcus Valverde", src: "/assets/marcus_valverde_sociedade_de_advogados_logo (1).jpeg" },
-            ].map(({ label, src }) => (
-              <div key={label} style={{ background: "#fff", padding: "2.5rem 2rem", display: "flex", alignItems: "center", justifyContent: "center", minHeight: 100 }}>
-                <img src={src} alt={label} height={32} style={{ objectFit: "contain", maxWidth: 140 }} />
+              { label: "FM/Derraik", node: <img src="/assets/FM_Derraik (1).png" alt="FM/Derraik" height={48} style={{ objectFit: "contain", maxWidth: 160 }} /> },
+              { label: "ABVCAP", node: <img src="/assets/images.jpg" alt="ABVCAP" height={48} style={{ objectFit: "contain", maxWidth: 160 }} /> },
+              { label: "AWS", node: <AWSLogo height={48} /> },
+              { label: "Marcus Valverde", node: <img src="/assets/marcus_valverde_sociedade_de_advogados_logo (1).jpeg" alt="Marcus Valverde" height={56} style={{ objectFit: "contain", maxWidth: 160 }} /> },
+            ].map(({ label, node }) => (
+              <div key={label} style={{ background: "#fff", padding: "2.5rem 2rem", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "0.85rem", minHeight: 140 }}>
+                {node}
+                <span style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.04em", color: "#777", textAlign: "center" }}>{label}</span>
               </div>
             ))}
           </div>

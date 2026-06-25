@@ -253,7 +253,7 @@ export default function Events() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0.75rem", marginBottom: "0.75rem" }}>
             <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "4/3" }}>
-              <img src="/assets/evento(3) site.jpg" alt="Florian Hagenbuch" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} />
+              <img src="/assets/05_florian_hagenbuch.jpg" alt="Florian Hagenbuch" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} />
             </div>
             <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "4/3" }}>
               <img src="/assets/evento (4) site.png" alt="Q1 2026 networking" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
