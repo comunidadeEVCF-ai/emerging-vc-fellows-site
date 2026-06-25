@@ -92,7 +92,7 @@ export default function Index() {
             <p style={{ fontSize: "1.05rem", color: "#555", lineHeight: 1.7 }}>Built for professionals already working in VC, looking to go further.</p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-            {["Works full time at a VC or CVC firm", "Analyst, Associate, or Principal — 3 to 10 years in the ecosystem", "Selected by profile — quality over volume"].map((item) => (
+            {["Works full time at a VC or CVC firm", "Analyst, Associate, or Principal — 3 to 10 years in the ecosystem", "Selected by profile"].map((item) => (
               <div key={item} style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
                 <span style={{ color: "#1F3C89", fontWeight: 700, fontSize: "1.1rem", marginTop: 2 }}>—</span>
                 <span style={{ fontSize: "1rem", color: "#333", lineHeight: 1.6 }}>{item}</span>

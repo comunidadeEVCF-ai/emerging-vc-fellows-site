@@ -259,7 +259,7 @@ export default function Index() {
             {[
               "Works full time at a VC or CVC firm",
               "Analyst, Associate, or Principal — 3 to 10 years in the ecosystem",
-              "Selected by profile — quality over volume",
+              "Selected by profile",
             ].map((item) => (
               <div key={item} style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
                 <span style={{ color: "#1F3C89", fontWeight: 700, fontSize: "1.1rem", marginTop: 2 }}>—</span>
