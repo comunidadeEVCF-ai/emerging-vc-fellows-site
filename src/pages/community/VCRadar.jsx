@@ -82,7 +82,7 @@ export default function VCRadar() {
           {/* Cover image */}
           <div style={{ flexShrink: 0 }}>
             <img
-              src="/assets/capa-radarvc.png"
+              src="/assets/capa-radarvc (1).png"
               alt="VC Radar Latam Report Cover"
               style={{
                 width: 220, height: "auto", borderRadius: 4,

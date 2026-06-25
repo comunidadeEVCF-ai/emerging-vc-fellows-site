@@ -54,15 +54,6 @@ const UPCOMING = [
   },
 ];
 
-const ARCHIVE_PHOTOS = [
-  { src: "/assets/FT_V_EVCF_ERIC_ACHER_191225_DLS_1_2_1.png", wide: true, caption: "Eric Acher · Monashees · Q4 2025" },
-  { src: "/assets/FT_H_EVCF_ERIC_ACHER_191225_DLS_1_5_1.png", wide: false, caption: "Q4 2025 · São Paulo" },
-  { src: "/assets/Q1_FOTOS_EVCF_FLORIAN_DLS_1_2_1.jpg", wide: false, caption: "Florian Hagenbuch · Q1 2026" },
-  { src: "/assets/Q1_FOTOS_EVCF_FLORIAN_DLS_1_19_1.jpg", wide: true, caption: "Q1 2026 · São Paulo" },
-  { src: "/assets/H_EVCF_KAZUO_060426_DLS_1_1_1.png", wide: false, caption: "Rafael Serson · Q1 2026" },
-  { src: "/assets/V_EVCF_KAZUO_060426_DLS_1_1_1.png", wide: false, caption: "Q1 2026 · São Paulo" },
-];
-
 const HEX_PATTERN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='52' viewBox='0 0 60 52'%3E%3Cpolygon points='30,2 58,17 58,47 30,62 2,47 2,17' fill='none' stroke='%23ffffff' stroke-width='1'/%3E%3C/svg%3E")`;
 const HEX_PATTERN_DARK = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='52' viewBox='0 0 60 52'%3E%3Cpolygon points='30,2 58,17 58,47 30,62 2,47 2,17' fill='none' stroke='%231F3C89' stroke-width='1.5'/%3E%3C/svg%3E")`;
 
@@ -243,29 +234,29 @@ export default function Events() {
           {/* Masonry-style grid */}
           <div style={{ display: "grid", gridTemplateColumns: "1.7fr 1fr", gap: "0.75rem", marginBottom: "0.75rem" }}>
             <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "16/9" }}>
-              <img src="/assets/FT_V_EVCF_ERIC_ACHER_191225_DLS_1_2_1.png" alt="Eric Acher event" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+              <img src="/assets/evento (1)- site.png" alt="Eric Acher event" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>
             <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "16/9" }}>
-              <img src="/assets/FT_H_EVCF_ERIC_ACHER_191225_DLS_1_5_1.png" alt="Q4 2025 event" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+              <img src="/assets/evento(2) site.png" alt="Q4 2025 event" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0.75rem", marginBottom: "0.75rem" }}>
             <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "4/3" }}>
-              <img src="/assets/Q1_FOTOS_EVCF_FLORIAN_DLS_1_2_1.jpg" alt="Florian Hagenbuch" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} />
+              <img src="/assets/evento(3) site.jpg" alt="Florian Hagenbuch" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} />
             </div>
             <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "4/3" }}>
-              <img src="/assets/Q1_FOTOS_EVCF_FLORIAN_DLS_1_19_1.jpg" alt="Q1 2026 networking" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+              <img src="/assets/evento (4) site.png" alt="Q1 2026 networking" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>
             <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "4/3" }}>
-              <img src="/assets/H_EVCF_KAZUO_060426_DLS_1_1_1.png" alt="Rafael Serson event" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+              <img src="/assets/evento 5 .png" alt="Rafael Serson event" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.7fr", gap: "0.75rem" }}>
             <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "4/3" }}>
-              <img src="/assets/V_EVCF_KAZUO_060426_DLS_1_1_1.png" alt="Q1 2026" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} />
+              <img src="/assets/evento (1)- site.png" alt="Q1 2026" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} />
             </div>
             <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "4/3" }}>
-              <img src="/assets/Q1_FOTOS_EVCF_FLORIAN_DLS_1_5_1.jpg" alt="Q1 2026 event" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+              <img src="/assets/evento(2) site.png" alt="Q1 2026 event" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>
           </div>
         </div>

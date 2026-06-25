@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 // ── EVCF Real Logo Icon (extracted from ICON-COLOR.pdf) ──────────────────────
 const EVCFIcon = ({ size = 48, opacity = 1, className = "" }) => (
@@ -43,18 +44,22 @@ const AWSLogo = ({ height = 32 }) => (
   </svg>
 );
 
+// ABVCAP has not provided a logo file yet — text placeholder until one is uploaded to public/assets
 const ABVCAPLogo = ({ height = 36 }) => (
-  <img
-    src="/assets/ABVCAP_marca_rgb.png"
-    alt="ABVCAP"
-    height={height}
-    style={{ objectFit: "contain" }}
-  />
+  <div style={{ height, display: "flex", alignItems: "center" }}>
+    <span style={{
+      fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
+      fontSize: height * 0.5,
+      fontWeight: 700,
+      letterSpacing: "0.02em",
+      color: "#1a1a2e",
+    }}>ABVCAP</span>
+  </div>
 );
 
 const MarcusValverdeLogo = ({ height = 36 }) => (
   <img
-    src="/assets/marcus-valverde.webp"
+    src="/assets/marcus_valverde_sociedade_de_advogados_logo (1).jpeg"
     alt="Marcus Valverde Sociedade de Advogados"
     height={height}
     style={{ objectFit: "contain" }}
@@ -73,6 +78,58 @@ const DMDeraikLogo = ({ height = 36 }) => (
     }}>DM/Derraik</span>
   </div>
 );
+
+// ── Resource card with hover reveal ────────────────────────────────────────────
+const ResourceCard = ({ to, eyebrow, title, body, img }) => {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <Link
+      to={to}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        position: "relative", display: "block", textDecoration: "none",
+        borderRadius: 4, overflow: "hidden", aspectRatio: "16/10",
+        border: "1px solid #e8e8e3",
+      }}
+    >
+      <img
+        src={img}
+        alt={title}
+        style={{
+          width: "100%", height: "100%", objectFit: "cover", display: "block",
+          transform: hovered ? "scale(1.04)" : "scale(1)",
+          transition: "transform 0.4s ease",
+        }}
+      />
+      <div style={{
+        position: "absolute", inset: 0,
+        background: "linear-gradient(to top, rgba(10,15,46,0.9) 0%, rgba(10,15,46,0.55) 45%, rgba(10,15,46,0.15) 100%)",
+      }} />
+      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "1.5rem" }}>
+        <div style={{ fontSize: 10, fontWeight: 600, letterSpacing: "0.12em", color: "rgba(255,255,255,0.55)", textTransform: "uppercase", marginBottom: 6 }}>
+          {eyebrow}
+        </div>
+        <div style={{ fontSize: "1.3rem", fontWeight: 800, color: "#fff", marginBottom: 6, letterSpacing: "-0.01em" }}>
+          {title}
+        </div>
+        <p style={{
+          fontSize: "0.9rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.5, margin: "0 0 0.75rem",
+          maxWidth: 420,
+        }}>
+          {body}
+        </p>
+        <span style={{
+          fontSize: 12, fontWeight: 700, color: "#fff", letterSpacing: "0.08em", textTransform: "uppercase",
+          opacity: hovered ? 1 : 0, transform: hovered ? "translateX(0)" : "translateX(-6px)",
+          transition: "opacity 0.25s ease, transform 0.25s ease",
+        }}>
+          View {title} →
+        </span>
+      </div>
+    </Link>
+  );
+};
 
 // ── Main page ─────────────────────────────────────────────────────────────────
 export default function Index() {
@@ -249,6 +306,38 @@ export default function Index() {
         </div>
       </section>
 
+      {/* ── 02 COMMUNITY TOOLS ── */}
+      <section style={{ padding: "0 2.5rem 7rem", background: "#fafaf8" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div style={{ fontSize: 11, letterSpacing: "0.14em", color: "#888", textTransform: "uppercase", fontWeight: 600, marginBottom: "1rem" }}>
+            02 — Community Tools
+          </div>
+          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.02em", marginBottom: "1rem", lineHeight: 1.1 }}>
+            Resources built for the community.
+          </h2>
+          <p style={{ fontSize: "1.1rem", color: "#555", maxWidth: 600, lineHeight: 1.7, marginBottom: "3rem" }}>
+            Two living resources curated by Emerging members — explore the tools VCs actually use and who's investing in what.
+          </p>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+            <ResourceCard
+              to="/community/vc-tech-stack"
+              eyebrow="Resource"
+              title="VC Tech Stack"
+              body="A curated map of the tools and platforms VC teams in Brazil rely on day to day."
+              img="/assets/capa_mockup (1).png"
+            />
+            <ResourceCard
+              to="/community/vc-radar"
+              eyebrow="Resource"
+              title="VC Radar"
+              body="A live radar of who's investing in what across the Brazilian and Latam ecosystem."
+              img="/assets/capa-radarvc (1).png"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ── WHO CAN JOIN ── */}
       <section style={{ padding: "5rem 2.5rem", background: "#f0f0eb", color: "#0d0d1a" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}>
@@ -301,11 +390,11 @@ export default function Index() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1.5rem" }}>
             {[
-              { name: "Rafael Serson", role: "Partner", fund: "Cloud 9", quarter: "Q1 · 2026", img: "/assets/V_EVCF_KAZUO_060426_DLS_1_8_1__1_.png" },
-              { name: "Shu Nyatta", role: "Managing Partner", fund: "Bicycle Capital", quarter: "Q1 · 2026", img: "/assets/Captura_de_Tela_2026-05-27_a_s_14_39_30.png" },
-              { name: "Eric Acher", role: "Founding Partner", fund: "Monashees", quarter: "Q4 · 2025", img: "/assets/FT_H_EVCF_ERIC_ACHER_191225_DLS_1_4_1.png" },
-              { name: "Luca Tajra", role: "Vice President", fund: "Warburg Pincus", quarter: "Q2 · 2026", img: "/assets/VF_FOTOS_TAJRA_EVCF_0526_DLS_-_13.png" },
-              { name: "Florian Hagenbuch", role: "Co-founder & Partner", fund: "Monashees", quarter: "Q4 · 2025", img: "/assets/Q1_FOTOS_EVCF_FLORIAN_DLS_5_4_1.jpg" },
+              { name: "Rafael Serson", role: "Partner", fund: "Cloud 9", quarter: "Q1 · 2026", img: "/assets/01_rafael_serson.jpg" },
+              { name: "Shu Nyatta", role: "Managing Partner", fund: "Bicycle Capital", quarter: "Q1 · 2026", img: "/assets/02_shu_nyatta.jpg" },
+              { name: "Eric Acher", role: "Founding Partner", fund: "Monashees", quarter: "Q4 · 2025", img: "/assets/03_eric_acher.jpg" },
+              { name: "Luca Tajra", role: "Vice President", fund: "Warburg Pincus", quarter: "Q2 · 2026", img: "/assets/04_luca_tajra.jpg" },
+              { name: "Florian Hagenbuch", role: "Co-founder & Partner", fund: "Monashees", quarter: "Q4 · 2025", img: "/assets/05_florian_hagenbuch.jpg" },
             ].map((speaker) => (
               <div key={speaker.name} style={{ position: "relative", aspectRatio: "3/4", overflow: "hidden", borderRadius: 2 }}>
                 <img
@@ -355,7 +444,7 @@ export default function Index() {
             marginBottom: "3rem",
           }}>
             {[
-              { label: "FM/Derraik", node: <img src="/assets/FM_Derraik.png" alt="FM/Derraik" height={28} style={{ objectFit: "contain" }} /> },
+              { label: "FM/Derraik", node: <img src="/assets/FM_Derraik (1).png" alt="FM/Derraik" height={28} style={{ objectFit: "contain" }} /> },
               { label: "ABVCAP", node: <ABVCAPLogo height={28} /> },
               { label: "AWS", node: <AWSLogo height={28} /> },
               { label: "Marcus Valverde", node: <MarcusValverdeLogo height={34} /> },
@@ -377,7 +466,7 @@ export default function Index() {
             <p style={{ fontSize: "0.95rem", color: "#666", maxWidth: 420, lineHeight: 1.6, margin: 0 }}>
               Want to reach Brazil's VC professionals? Learn how a partnership with Emerging works.
             </p>
-            <a href="#contact" style={{
+            <a href="mailto:comunidade@emergingvcfellows.com" style={{
               border: "1px solid #0a0f2e", color: "#0a0f2e",
               padding: "12px 28px", borderRadius: 2,
               textDecoration: "none", fontSize: 13, fontWeight: 700,

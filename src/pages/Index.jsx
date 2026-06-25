@@ -143,7 +143,7 @@ export default function Index() {
           </div>
           <div style={{ borderTop: "1px solid #efefea", paddingTop: "2rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
             <p style={{ fontSize: "0.95rem", color: "#666", maxWidth: 420, lineHeight: 1.6, margin: 0 }}>Want to reach Brazil's VC professionals? Learn how a partnership with Emerging works.</p>
-            <a href="https://criteriosevcf.carrd.co/" style={{ border: "1px solid #0a0f2e", color: "#0a0f2e", padding: "12px 28px", borderRadius: 20, textDecoration: "none", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" }}>Become a partner →</a>
+            <a href="mailto:comunidade@emergingvcfellows.com" style={{ border: "1px solid #0a0f2e", color: "#0a0f2e", padding: "12px 28px", borderRadius: 20, textDecoration: "none", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" }}>Become a partner →</a>
           </div>
         </div>
       </section>

@@ -112,7 +112,7 @@ export default function VCTechStack() {
           {/* Cover mockup */}
           <div style={{ flexShrink: 0 }}>
             <img
-              src="/assets/capa_mockup.png"
+              src="/assets/capa_mockup (1).png"
               alt="VC Tech Stack Report Cover"
               style={{
                 width: 240, height: "auto", borderRadius: 4,
