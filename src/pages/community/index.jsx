@@ -1,6 +1,15 @@
 import { useEffect, useRef } from "react";
 import ContentDropdown from "../../components/ContentDropdown";
 import AWSLogo from "../../components/AWSLogo";
+import SpeakerCarousel from "../../components/SpeakerCarousel";
+
+const SPEAKERS = [
+  { name: "Rafael Serson", role: "Partner", fund: "Cloud 9", quarter: "Q1 · 2026", img: "/assets/01_rafael_serson.jpg" },
+  { name: "Shu Nyatta", role: "Managing Partner", fund: "Bicycle Capital", quarter: "Q1 · 2026", img: "/assets/02_shu_nyatta.jpg" },
+  { name: "Luca Tajra", role: "Vice President", fund: "Warburg Pincus", quarter: "Q2 · 2026", img: "/assets/04_luca_tajra.jpg" },
+  { name: "Eric Acher", role: "Founding Partner", fund: "Monashees", quarter: "Q4 · 2025", img: "/assets/03_eric_acher.jpg" },
+  { name: "Florian Hagenbuch", role: "Co-founder & Partner", fund: "Monashees", quarter: "Q4 · 2025", img: "/assets/05_florian_hagenbuch.jpg" },
+];
 
 // ── EVCF Real Logo Icon (extracted from ICON-COLOR.pdf) ──────────────────────
 const EVCFIcon = ({ size = 48, opacity = 1, className = "" }) => (
@@ -287,41 +296,8 @@ export default function Index() {
           <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.02em", marginBottom: "0.75rem", lineHeight: 1.1 }}>
             Who has been through Emerging.
           </h2>
-          <p style={{ fontSize: "1.05rem", color: "#666", maxWidth: 520, lineHeight: 1.7, marginBottom: "3.5rem" }}>
-            The speakers say more about the community than any description could.
-          </p>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1.5rem" }}>
-            {[
-              { name: "Rafael Serson", role: "Partner", fund: "Cloud 9", quarter: "Q1 · 2026", img: "/assets/01_rafael_serson.jpg" },
-              { name: "Shu Nyatta", role: "Managing Partner", fund: "Bicycle Capital", quarter: "Q1 · 2026", img: "/assets/02_shu_nyatta.jpg" },
-              { name: "Eric Acher", role: "Founding Partner", fund: "Monashees", quarter: "Q4 · 2025", img: "/assets/03_eric_acher.jpg" },
-              { name: "Luca Tajra", role: "Vice President", fund: "Warburg Pincus", quarter: "Q2 · 2026", img: "/assets/04_luca_tajra.jpg" },
-              { name: "Florian Hagenbuch", role: "Co-founder & Partner", fund: "Monashees", quarter: "Q4 · 2025", img: "/assets/05_florian_hagenbuch.jpg" },
-            ].map((speaker) => (
-              <div key={speaker.name} style={{ position: "relative", aspectRatio: "3/4", overflow: "hidden", borderRadius: 2 }}>
-                <img
-                  src={speaker.img}
-                  alt={speaker.name}
-                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                />
-                <div style={{
-                  position: "absolute", inset: 0,
-                  background: "linear-gradient(to top, rgba(10,15,46,0.92) 0%, transparent 55%)",
-                }} />
-                <div style={{ position: "absolute", bottom: 0, left: 0, padding: "1.25rem 1rem" }}>
-                  <div style={{ fontSize: 10, fontWeight: 600, letterSpacing: "0.1em", color: "rgba(255,255,255,0.5)", textTransform: "uppercase", marginBottom: 6 }}>
-                    {speaker.quarter}
-                  </div>
-                  <div style={{ fontSize: "1rem", fontWeight: 700, color: "#fff", lineHeight: 1.2, marginBottom: 3 }}>
-                    {speaker.name}
-                  </div>
-                  <div style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.6)" }}>
-                    {speaker.role} · {speaker.fund}
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div style={{ marginTop: "2.5rem" }}>
+            <SpeakerCarousel speakers={SPEAKERS} />
           </div>
         </div>
       </section>
@@ -350,7 +326,7 @@ export default function Index() {
               { label: "FM/Derraik", node: <img src="/assets/FM_Derraik (1).png" alt="FM/Derraik" height={48} style={{ objectFit: "contain" }} /> },
               { label: "ABVCAP", node: <ABVCAPLogo height={48} /> },
               { label: "AWS", node: <AWSLogo height={48} /> },
-              { label: "Marcus Valverde", node: <MarcusValverdeLogo height={56} /> },
+              { label: "Marcus Valverde Sociedade de Advogados", node: <MarcusValverdeLogo height={56} /> },
             ].map(({ label, node }) => (
               <div key={label} style={{
                 background: "#fff", padding: "2.5rem 2rem",
