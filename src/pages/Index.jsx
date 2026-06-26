@@ -129,12 +129,12 @@ export default function Index() {
           <p style={{ fontSize: "1rem", color: "#666", maxWidth: 480, lineHeight: 1.7, marginBottom: "3rem" }}>Organizations that believe in the value of a curated VC community.</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1px", background: "#efefea", border: "1px solid #efefea", borderRadius: 4, overflow: "hidden", marginBottom: "3rem" }}>
             {[
-              { label: "FM/Derraik", node: <img src="/assets/FM_Derraik (1).png" alt="FM/Derraik" height={48} style={{ objectFit: "contain", maxWidth: 160 }} /> },
-              { label: "ABVCAP", node: <img src="/assets/images.jpg" alt="ABVCAP" height={48} style={{ objectFit: "contain", maxWidth: 160 }} /> },
-              { label: "AWS", node: <AWSLogo height={48} /> },
-              { label: "Marcus Valverde Sociedade de Advogados", node: <img src="/assets/marcus_valverde_sociedade_de_advogados_logo (1).jpeg" alt="Marcus Valverde Sociedade de Advogados" height={56} style={{ objectFit: "contain", maxWidth: 160 }} /> },
+              { label: "FM/Derraik", node: <img src="/assets/FM_Derraik (1).png" alt="FM/Derraik" height={72} style={{ objectFit: "contain", maxWidth: 220 }} /> },
+              { label: "ABVCAP", node: <img src="/assets/images.jpg" alt="ABVCAP" height={72} style={{ objectFit: "contain", maxWidth: 220 }} /> },
+              { label: "AWS", node: <AWSLogo height={72} /> },
+              { label: "Marcus Valverde Sociedade de Advogados", node: <img src="/assets/marcus_valverde_sociedade_de_advogados_logo (1).jpeg" alt="Marcus Valverde Sociedade de Advogados" height={84} style={{ objectFit: "contain", maxWidth: 220 }} /> },
             ].map(({ label, node }) => (
-              <div key={label} style={{ background: "#fff", padding: "2.5rem 2rem", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "0.85rem", minHeight: 140 }}>
+              <div key={label} style={{ background: "#fff", padding: "2.5rem 2rem", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "0.85rem", minHeight: 180 }}>
                 {node}
                 <span style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.04em", color: "#777", textAlign: "center" }}>{label}</span>
               </div>

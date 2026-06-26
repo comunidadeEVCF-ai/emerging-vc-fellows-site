@@ -323,15 +323,15 @@ export default function Index() {
             marginBottom: "3rem",
           }}>
             {[
-              { label: "FM/Derraik", node: <img src="/assets/FM_Derraik (1).png" alt="FM/Derraik" height={48} style={{ objectFit: "contain" }} /> },
-              { label: "ABVCAP", node: <ABVCAPLogo height={48} /> },
-              { label: "AWS", node: <AWSLogo height={48} /> },
-              { label: "Marcus Valverde Sociedade de Advogados", node: <MarcusValverdeLogo height={56} /> },
+              { label: "FM/Derraik", node: <img src="/assets/FM_Derraik (1).png" alt="FM/Derraik" height={72} style={{ objectFit: "contain" }} /> },
+              { label: "ABVCAP", node: <ABVCAPLogo height={72} /> },
+              { label: "AWS", node: <AWSLogo height={72} /> },
+              { label: "Marcus Valverde Sociedade de Advogados", node: <MarcusValverdeLogo height={84} /> },
             ].map(({ label, node }) => (
               <div key={label} style={{
                 background: "#fff", padding: "2.5rem 2rem",
                 display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "0.85rem",
-                minHeight: 140,
+                minHeight: 180,
               }}>
                 {node}
                 <span style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.04em", color: "#777", textAlign: "center" }}>
