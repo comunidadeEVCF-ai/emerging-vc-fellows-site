@@ -1,5 +1,5 @@
 import ContentDropdown from "../components/ContentDropdown";
-import ArchiveGallery from "../components/ArchiveGallery";
+import FeaturedGallery from "../components/FeaturedGallery";
 
 const NAV_LINKS_LEFT = [["Home", "/"]];
 const NAV_LINKS_RIGHT = [["Events", "/events"], ["Membership", "https://criteriosevcf.carrd.co/"]];
@@ -251,7 +251,7 @@ export default function Events() {
             A look at the conversations that have shaped the community.
           </p>
 
-          <ArchiveGallery photos={ARCHIVE_PHOTOS} />
+          <FeaturedGallery photos={ARCHIVE_PHOTOS} />
         </div>
       </section>
 
