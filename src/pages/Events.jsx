@@ -1,7 +1,16 @@
 import ContentDropdown from "../components/ContentDropdown";
+import ArchiveGallery from "../components/ArchiveGallery";
 
 const NAV_LINKS_LEFT = [["Home", "/"]];
 const NAV_LINKS_RIGHT = [["Events", "/events"], ["Membership", "https://criteriosevcf.carrd.co/"]];
+
+const ARCHIVE_PHOTOS = [
+  { src: "/assets/evento (1)- site.png", caption: "Q4 2025 · São Paulo" },
+  { src: "/assets/evento(2) site.png", caption: "Q4 2025 · São Paulo" },
+  { src: "/assets/05_florian_hagenbuch.jpg", caption: "Florian Hagenbuch" },
+  { src: "/assets/evento (4) site.png", caption: "Q1 2026 · São Paulo" },
+  { src: "/assets/evento 5 .png", caption: "Q1 2026 · São Paulo" },
+];
 
 const Logo = () => (
   <svg viewBox="0 0 816.954 567.512" width="32" height="22" aria-hidden="true">
@@ -242,34 +251,7 @@ export default function Events() {
             A look at the conversations that have shaped the community.
           </p>
 
-          {/* Masonry-style grid */}
-          <div style={{ display: "grid", gridTemplateColumns: "1.7fr 1fr", gap: "0.75rem", marginBottom: "0.75rem" }}>
-            <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "16/9" }}>
-              <img src="/assets/evento (1)- site.png" alt="Eric Acher event" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-            </div>
-            <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "16/9" }}>
-              <img src="/assets/evento(2) site.png" alt="Q4 2025 event" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-            </div>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0.75rem", marginBottom: "0.75rem" }}>
-            <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "4/3" }}>
-              <img src="/assets/05_florian_hagenbuch.jpg" alt="Florian Hagenbuch" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} />
-            </div>
-            <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "4/3" }}>
-              <img src="/assets/evento (4) site.png" alt="Q1 2026 networking" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-            </div>
-            <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "4/3" }}>
-              <img src="/assets/evento 5 .png" alt="Rafael Serson event" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-            </div>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.7fr", gap: "0.75rem" }}>
-            <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "4/3" }}>
-              <img src="/assets/evento (1)- site.png" alt="Q1 2026" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} />
-            </div>
-            <div style={{ borderRadius: 3, overflow: "hidden", aspectRatio: "4/3" }}>
-              <img src="/assets/evento(2) site.png" alt="Q1 2026 event" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-            </div>
-          </div>
+          <ArchiveGallery photos={ARCHIVE_PHOTOS} />
         </div>
       </section>
 
