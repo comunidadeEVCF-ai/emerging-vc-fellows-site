@@ -323,9 +323,9 @@ export default function Index() {
             marginBottom: "3rem",
           }}>
             {[
-              { label: "FM/Derraik", node: <img src="/assets/FM_Derraik (1).png" alt="FM/Derraik" height={72} style={{ objectFit: "contain" }} /> },
+              { label: "FM/Derraik", node: <img src="/assets/FM_Derraik (1).png" alt="FM/Derraik" height={92} style={{ objectFit: "contain" }} /> },
               { label: "ABVCAP", node: <ABVCAPLogo height={72} /> },
-              { label: "AWS", node: <AWSLogo height={72} /> },
+              { label: "AWS", node: <AWSLogo height={52} /> },
               { label: "Marcus Valverde Sociedade de Advogados", node: <MarcusValverdeLogo height={84} /> },
             ].map(({ label, node }) => (
               <div key={label} style={{
