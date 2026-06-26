@@ -131,7 +131,7 @@ export default function Events() {
             What's coming next.
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.45)", maxWidth: 480, lineHeight: 1.7, margin: 0 }}>
-            Three events per quarter — two intimate lunches and one happy hour. Always closed-door, always members only.
+            Small group. Real talk.
           </p>
         </div>
 
