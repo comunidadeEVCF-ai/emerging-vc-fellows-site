@@ -64,6 +64,17 @@ const UPCOMING = [
     location: "São Paulo · Members only",
     register: "https://criteriosevcf.carrd.co/",
   },
+  {
+    type: "LUNCH",
+    filled: false,
+    date: "TBA",
+    day: "Date to be announced",
+    speaker: "Allen Taylor",
+    topic: "To be announced",
+    fund: null,
+    location: "São Paulo · Members only",
+    register: "https://criteriosevcf.carrd.co/",
+  },
 ];
 
 const HEX_PATTERN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='52' viewBox='0 0 60 52'%3E%3Cpolygon points='30,2 58,17 58,47 30,62 2,47 2,17' fill='none' stroke='%23ffffff' stroke-width='1'/%3E%3C/svg%3E")`;
@@ -170,7 +181,7 @@ export default function Events() {
         }} />
         <div style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ fontSize: 11, letterSpacing: "0.16em", color: "#1F3C89", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.75rem" }}>
-            Q2 · 2026
+            Q3 · 2026
           </div>
           <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.02em", margin: "0 0 3rem", lineHeight: 1.05 }}>
             Upcoming events this quarter.
@@ -212,7 +223,7 @@ export default function Events() {
                   {ev.speaker ? (
                     <>
                       <div style={{ fontSize: "1rem", fontWeight: 700, color: "#0a0f2e", marginBottom: 4 }}>{ev.speaker}</div>
-                      <div style={{ fontSize: "0.88rem", color: "#666" }}>{ev.topic} · {ev.fund}</div>
+                      <div style={{ fontSize: "0.88rem", color: "#666" }}>{ev.topic}{ev.fund ? ` · ${ev.fund}` : ""}</div>
                     </>
                   ) : (
                     <div style={{ fontSize: "0.98rem", color: "#555", lineHeight: 1.6, fontStyle: "italic" }}>
