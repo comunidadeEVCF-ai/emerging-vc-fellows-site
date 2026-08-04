@@ -141,7 +141,7 @@ export default function VCRadar() {
                 Download Report 2024
               </a>
               <a
-                href="https://drive.google.com/file/d/1aPRS98eeGG8eU2HTWG-bOAN5V0flNEBE/view?pli=1"
+                href="https://airtable.com/appsvDvd2CnI9LaR6/shrWF1WYuQt2uZvrW/tbl6s5ct5UKymQQFY"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
