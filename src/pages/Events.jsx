@@ -48,7 +48,7 @@ const UPCOMING = [
     date: "Sep 17",
     day: "THURSDAY",
     speaker: "Allen Taylor",
-    topic: "To be announced",
+    topic: "",
     fund: null,
     location: "São Paulo · Members only",
     register: "https://criteriosevcf.carrd.co/",
@@ -201,7 +201,9 @@ export default function Events() {
                   {ev.speaker ? (
                     <>
                       <div style={{ fontSize: "1rem", fontWeight: 700, color: "#0a0f2e", marginBottom: 4 }}>{ev.speaker}</div>
-                      <div style={{ fontSize: "0.88rem", color: "#666" }}>{ev.topic}{ev.fund ? ` · ${ev.fund}` : ""}</div>
+                      {(ev.topic || ev.fund) && (
+                        <div style={{ fontSize: "0.88rem", color: "#666" }}>{ev.topic}{ev.fund ? ` · ${ev.fund}` : ""}</div>
+                      )}
                     </>
                   ) : (
                     <div style={{ fontSize: "0.98rem", color: "#555", lineHeight: 1.6, fontStyle: "italic" }}>
