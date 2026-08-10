@@ -5,9 +5,9 @@ import SpeakerCarousel from "../components/SpeakerCarousel";
 
 const SPEAKERS = [
   { name: "Rafael Serson", role: "Partner", fund: "Cloud 9", quarter: "Q1 · 2026", img: "/assets/01_rafael_serson.jpg" },
-  { name: "Shu Nyatta", role: "Managing Partner", fund: "Bicycle Capital", quarter: "Q1 · 2026", img: "/assets/02_shu_nyatta.jpg" },
+  { name: "Shu Nyatta", role: "Managing Partner", fund: "Bicycle Capital", quarter: "Q4 · 2025", img: "/assets/02_shu_nyatta.jpg" },
   { name: "Luca Tajra", role: "Vice President", fund: "Warburg Pincus", quarter: "Q2 · 2026", img: "/assets/04_luca_tajra.jpg" },
-  { name: "Eric Acher", role: "Founding Partner", fund: "Monashees", quarter: "Q4 · 2025", img: "/assets/03_eric_acher.png" },
+  { name: "Eric Acher", role: "Founding Partner", fund: "Monashees", quarter: "Q1 · 2026", img: "/assets/03_eric_acher.png" },
   { name: "Florian Hagenbuch", role: "Co-founder & Partner", fund: "Canary", quarter: "Q4 · 2025", img: "/assets/05_florian_hagenbuch.jpg" },
   { name: "Carla Barone", role: "Partner", fund: "OneVC", quarter: "Q3 · 2026", img: "/assets/06_carla_barone.png" },
 ];
