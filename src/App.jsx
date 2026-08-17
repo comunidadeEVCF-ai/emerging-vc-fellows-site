@@ -4,6 +4,7 @@ import Events from "./pages/Events";
 import Community from "./pages/community/index";
 import VCRadar from "./pages/community/VCRadar";
 import VCTechStack from "./pages/community/VCTechStack";
+import AIResearch from "./pages/community/AIResearch";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/community" element={<Community />} />
         <Route path="/community/vc-radar" element={<VCRadar />} />
         <Route path="/community/vc-tech-stack" element={<VCTechStack />} />
+        <Route path="/community/ai-research" element={<AIResearch />} />
       </Routes>
     </BrowserRouter>
   );

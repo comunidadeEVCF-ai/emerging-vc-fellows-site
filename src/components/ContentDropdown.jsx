@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const ITEMS = [
   { label: "VC Radar", to: "/community/vc-radar" },
   { label: "VC Tech Stack", to: "/community/vc-tech-stack" },
+  { label: "AI in VC Research", to: "/community/ai-research" },
 ];
 
 export default function ContentDropdown({ dark = true }) {
