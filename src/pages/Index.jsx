@@ -10,6 +10,7 @@ const SPEAKERS = [
   { name: "Eric Acher", role: "Founding Partner", fund: "Monashees", quarter: "Q1 · 2026", img: "/assets/03_eric_acher.png" },
   { name: "Florian Hagenbuch", role: "Co-founder & Partner", fund: "Canary", quarter: "Q4 · 2025", img: "/assets/05_florian_hagenbuch.jpg" },
   { name: "Carla Barone", role: "Partner", fund: "OneVC", quarter: "Q3 · 2026", img: "/assets/06_carla_barone.png" },
+  { name: "Allen Taylor", role: "Managing Partner", fund: "Endeavor", quarter: "Q3 · 2026", img: "/assets/07_allen_taylor.jpg" },
 ];
 
 const EVCFIcon = ({ size = 48, opacity = 1, className = "" }) => (
