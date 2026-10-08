@@ -32,22 +32,33 @@ const FooterLogo = () => (
 
 const UPCOMING = [
   {
-    type: "SOCIAL",
+    type: "LUNCH",
     filled: false,
-    date: "Aug 19",
+    date: "Oct 28",
     day: "WEDNESDAY",
-    speaker: null,
-    topic: "Bowling with EVCF",
-    fund: null,
+    speaker: "Carolina da Leva & Renato Pavan",
+    topic: "Fundraising & The LP Point of View",
+    fund: "HCM Capital & Península",
     location: "São Paulo · Members only",
     register: "https://criteriosevcf.carrd.co/",
   },
   {
     type: "LUNCH",
     filled: false,
-    date: "Sep 17",
-    day: "THURSDAY",
-    speaker: "Allen Taylor",
+    date: "Nov 17",
+    day: "TUESDAY",
+    speaker: "Marcello Gonçalves, Rodrigo Borges & Felipe Andrade",
+    topic: "Metamorphosis of Funds",
+    fund: "DOMO",
+    location: "São Paulo · Members only",
+    register: "https://criteriosevcf.carrd.co/",
+  },
+  {
+    type: "LUNCH",
+    filled: false,
+    date: "Dec 08",
+    day: "TUESDAY",
+    speaker: "Special Guests",
     topic: "",
     fund: null,
     location: "São Paulo · Members only",
@@ -159,7 +170,7 @@ export default function Events() {
         }} />
         <div style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ fontSize: 11, letterSpacing: "0.16em", color: "#1F3C89", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.75rem" }}>
-            Q3 · 2026
+            Q4 · 2026
           </div>
           <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.02em", margin: "0 0 3rem", lineHeight: 1.05 }}>
             Upcoming events this quarter.
